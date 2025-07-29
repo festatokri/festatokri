@@ -760,45 +760,14 @@
 <!-- JavaScript for total price updates -->
 <script>
  
- function calculatePrice() {
+  function updatePrice() {
     const basePrice = 249;
-    const item1Value = document.getElementById("item1").value;
-    const item2Value = document.getElementById("item2").value;
-
-    if (!item1Value || !item2Value) {
-      document.getElementById("totalPrice").innerText = Total Price: ₹${basePrice};
-      return;
-    }
-
-    const price1 = parseInt(item1Value.split("-")[1]);
-    const price2 = parseInt(item2Value.split("-")[1]);
-
-    const total = basePrice + price1 + price2;
-    document.getElementById("totalPrice").innerText = Total Price: ₹${total};
+    const item1 = parseInt(document.getElementById("item1").value);
+    const item2 = parseInt(document.getElementById("item2").value);
+    const total = basePrice + item1 + item2;
+    document.getElementById("totalPrice").innerText = "Total Price: ₹" + total;
   }
-
-  function sendOrder() {
-    const item1Value = document.getElementById("item1").value;
-    const item2Value = document.getElementById("item2").value;
-
-    if (!item1Value || !item2Value) {
-      alert("Please select both items.");
-      return;
-    }
-
-    const basePrice = 249;
-    const item1 = item1Value.split("-")[0];
-    const item2 = item2Value.split("-")[0];
-    const price1 = parseInt(item1Value.split("-")[1]);
-    const price2 = parseInt(item2Value.split("-")[1]);
-    const total = basePrice + price1 + price2;
-
-    const msg = Hi, I want to order the 2 Jar Hamper.%0A%0AItems Selected:%0A1. ${item1}%0A2. ${item2}%0A%0ATotal Price: ₹${total};
-
-    const whatsappURL = https://wa.me/918860842048?text=${msg};
-    window.open(whatsappURL, "_blank");
-  }
-
+ 
 
   function updatePinePrice() {
     const basePrice = 299;
