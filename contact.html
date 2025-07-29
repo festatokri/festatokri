@@ -3,93 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+rel="stylesheet"/>
+
+<link rel="icon" href="favicon.ico"
+type="image/x-icon" />
   <title>Contact Us – Festa Tokri</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+footer a {
+  color: #004AAC;
+  text-decoration: none;
+}
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffaf5;
-      color: #333;
-    }
+       margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+  }
 
-    .container {
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 40px;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
+  header {
+    background-color: #A4CCFE;
+    color: #004AAC;
+    text-align: center;
+    padding: 60px 20px;
+  }
 
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      color: #d76c6c;
-      margin-bottom: 40px;
-    }
+  header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 15px 0;
-      border-bottom: 1px solid #f0e8e8;
-      font-size: 17px;
-    }
+  header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-    .contact-item:last-child {
-      border-bottom: none;
-    }
+  header button, .more, .contact {
+    padding: 10px 20px;
+    background-color: #004AAC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+  }
 
-    .contact-item img {
-      width: 26px;
-      height: 26px;
-    }
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
 
-    a {
-      color: #d76c6c;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+  .product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
 
-    a:hover {
-      color: #b95454;
-    }
+  footer {
+    background: #A4CCFE;
+    padding: 20px;
+    text-align: center;
+    color: #004AAC;
+  }
 
-    .back-home {
-      display: inline-block;
-      margin-top: 30px;
-      text-align: center;
-      background: #d76c6c;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    .back-home:hover {
-      background: #b95454;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 30px 20px;
-        padding: 25px;
-      }
-      h1 {
-        font-size: 24px;
-      }
-      .contact-item {
-        font-size: 16px;
-      }
-    }
+  .social a img {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(80%) saturate(4500%) hue-rotate(205deg) brightness(97%) contrast(98%);
+  }
   </style>
 </head>
 <body>
+<section style="max-width: 600px; margin: auto; padding: 40px 20px;">
+  <h2 style="color: #004AAC;">Get in Touch</h2>
+  <form>
+    <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px;" required />
+    <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 10px;" required />
+    <textarea placeholder="Your Message" style="width: 100%; padding: 10px; margin-bottom: 10px;" rows="5"></textarea>
+    <button type="submit" style="background-color: #004AAC; color: white; padding: 10px 20px; border: none; border-radius: 20px;">Send</button>
+  </form>
+</section>
+<nav style="background-color: #004AAC; padding: 10px 20px; text-align: center;">
+  <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Home</a>
+  <a href="product.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Products</a>
+  <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Contact</a>
+</nav>
   <div class="container">
     <h1>We'd love to hear from you</h1>
 

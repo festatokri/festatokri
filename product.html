@@ -2,63 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+rel="stylesheet"/>
+
+<link rel="icon" href="favicon.ico"
+type="image/x-icon" />
   <title>Our Products - Festa Tokri</title>
   <style>
+footer a {
+  color: #004AAC;
+  text-decoration: none;
+}
+body {
+ margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+  }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff9f5;
-    }
-    h1 {
-      text-align: center;
-      padding: 20px;
-      color: #b3541e;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 30px;
-    }
-    .product-card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding: 20px;
-      text-align: center;
-    }
-    .product-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: contain;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      background-color: #f3f3f3;
-    }
-    .product-info select {
-      padding: 8px;
-      border-radius: 10px;
-      margin: 5px;
-    }
-    .btn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #b3541e;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #8f3e14;
-    }
-  </style>
+  header {
+    background-color: #A4CCFE;
+    color: #004AAC;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  header button, .more, .contact {
+    padding: 10px 20px;
+    background-color: #004AAC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  footer {
+    background: #A4CCFE;
+    padding: 20px;
+    text-align: center;
+    color: #004AAC;
+  }
+
+  .social a img {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(80%) saturate(4500%) hue-rotate(205deg) brightness(97%) contrast(98%);
+  }
+
+    </style>
 </head>
 <body>
+<nav style="background-color: #004AAC; padding: 10px 20px; text-align: center;">
+  <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Home</a>
+  <a href="product.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Products</a>
+  <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Contact</a>
+</nav>
 
 <h1>Our Products</h1>
 <div class="product-grid">
