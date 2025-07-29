@@ -3,114 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Festatokri | Products</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>FestaTokri | Gift Hampers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f9ff;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      background-color: #F9FBFF;
     }
 
     header {
       background-color: #004AAC;
-      padding: 20px;
-      text-align: center;
       color: white;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    section {
-      padding: 40px 20px;
+      padding: 20px 0;
       text-align: center;
     }
 
-    section h2 {
-      font-size: 32px;
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #A4CCFE;
+    }
+
+    section.products-section {
+      padding: 40px 20px;
+      background-color: #F5FAFF;
+    }
+
+    .products-section h2 {
+      text-align: center;
+      font-size: 30px;
       color: #004AAC;
       margin-bottom: 10px;
     }
 
-    section p {
-      color: #555;
+    .products-section p {
+      text-align: center;
       font-size: 16px;
-      margin-bottom: 30px;
+      color: #666;
+      margin-bottom: 40px;
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      padding: 0 20px;
+      gap: 30px;
       max-width: 1200px;
       margin: auto;
     }
 
     .product-card {
-      background: white;
-      border-radius: 12px;
+      background-color: white;
+      border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 16px;
-      transition: transform 0.2s ease;
+      padding: 15px;
+      transition: 0.3s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
 
     .product-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .product-card h4 {
+      margin: 15px 0 8px;
+      font-size: 20px;
       color: #004AAC;
-      font-size: 18px;
-      margin: 12px 0 6px;
     }
 
     .product-card p {
       font-weight: bold;
+      color: #444;
       margin-bottom: 10px;
     }
 
-    .product-card a {
-      text-decoration: none;
+    .buy-btn {
+      display: inline-block;
+      padding: 8px 18px;
       background-color: #004AAC;
       color: white;
-      padding: 8px 14px;
-      border-radius: 8px;
-      display: inline-block;
-      transition: background 0.3s;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
 
-    .product-card a:hover {
-      background-color: #003380;
+    .buy-btn:hover {
+      background-color: #003080;
     }
 
     footer {
       background-color: #004AAC;
       color: white;
-      padding: 20px 10px;
+      padding: 20px;
       text-align: center;
-      margin-top: 60px;
-    }
-
-    .social img {
-      width: 24px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-
-    .social a {
-      display: inline-block;
+      font-size: 14px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -122,12 +121,13 @@
 </nav>
 
   <header>
-    <h1>Our Gift Hampers</h1>
+    <h1>FestaTokri</h1>
+    <p class="tagline">Curated Gift Hampers for Every Occasion 🎁</p>
   </header>
 
-  <section>
-    <h2>Thoughtfully Designed for Every Occasion</h2>
-    <p>Explore our elegant, handmade hampers curated for festivals, special occasions, weddings & more.</p>
+  <section class="products-section">
+    <h2>Explore Our Hampers</h2>
+    <p>Handpicked. Beautifully packed. Delivered with love 💝</p>
 
     <div class="products">
 
@@ -720,17 +720,8 @@
     </div>
   </section>
 
-  <footer>
-    <p>Follow Us</p>
-    <div class="social">
-      <a href="https://www.instagram.com/festatokri_gift_hampers" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/174/174855.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/festatokri" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-      </a>
-    </div>
-    <p style="margin-top: 10px;">&copy; 2025 Festatokri | All Rights Reserved</p>
+   <footer>
+    &copy; 2025 FestaTokri | Made with 💝 for Gifting Moments
   </footer>
 
 <!-- JavaScript for total price updates -->
