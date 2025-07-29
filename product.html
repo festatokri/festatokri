@@ -1,92 +1,118 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-rel="stylesheet"/>
-
-<link rel="icon" href="favicon.ico"
-type="image/x-icon" />
-  <title>Our Products - Festa Tokri</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festatokri | Products</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-footer a {
-  color: #004AAC;
-  text-decoration: none;
-}
-body {
- margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9ff;
+      color: #222;
+    }
 
-  header {
-    background-color: #A4CCFE;
-    color: #004AAC;
-    text-align: center;
-    padding: 60px 20px;
-  }
+    header {
+      background-color: #004AAC;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
 
-  header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
+    header h1 {
+      margin: 0;
+    }
 
-  header p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-  header button, .more, .contact {
-    padding: 10px 20px;
-    background-color: #004AAC;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    font-weight: bold;
-  }
+    section h2 {
+      font-size: 32px;
+      color: #004AAC;
+      margin-bottom: 10px;
+    }
 
-.product-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-padding: 30px;
-}
+    section p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
 
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-  .product-card {
-width: 200px
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: left;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-box-shadow: 0 0 10px 
-rgba(0,0,0,0.05);
-  }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 16px;
+      transition: transform 0.2s ease;
+    }
 
-  .product-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    background: #fff;
-  }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
 
-  footer {
-    background: #A4CCFE;
-    padding: 20px;
-    text-align: center;
-    color: #004AAC;
-  }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-  .social a img {
-    filter: brightness(0) saturate(100%) invert(17%) sepia(80%) saturate(4500%) hue-rotate(205deg) brightness(97%) contrast(98%);
-  }
+    .product-card h4 {
+      color: #004AAC;
+      font-size: 18px;
+      margin: 12px 0 6px;
+    }
 
-    </style>
+    .product-card p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card a {
+      text-decoration: none;
+      background-color: #004AAC;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .product-card a:hover {
+      background-color: #003380;
+    }
+
+    footer {
+      background-color: #004AAC;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .social img {
+      width: 24px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    .social a {
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
 <nav style="background-color: #004AAC; padding: 10px 20px; text-align: center;">
@@ -95,10 +121,17 @@ rgba(0,0,0,0.05);
   <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">Contact</a>
 </nav>
 
-<h1>Our Products</h1>
-<div class="product-grid">
+  <header>
+    <h1>Our Gift Hampers</h1>
+  </header>
 
-  <!-- Product 1 -->
+  <section>
+    <h2>Thoughtfully Designed for Every Occasion</h2>
+    <p>Explore our elegant, handmade hampers curated for festivals, special occasions, weddings & more.</p>
+
+    <div class="products">
+
+<!-- Product 1 -->
   <div class="product-card">
     <img src="S1.1.jpg" class="product-image">
     <img src="S1.2.jpg" class="product-image">
@@ -683,7 +716,22 @@ rgba(0,0,0,0.05);
   </div>
 </div>
 
-</div>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>Follow Us</p>
+    <div class="social">
+      <a href="https://www.instagram.com/festatokri_gift_hampers" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/174/174855.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/festatokri" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 Festatokri | All Rights Reserved</p>
+  </footer>
 
 <!-- JavaScript for total price updates -->
 <script>
@@ -783,8 +831,3 @@ function updateCelebrationTotal() {
 
 </body>
 </html>
-
-
-
-
-
