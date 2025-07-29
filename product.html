@@ -90,22 +90,18 @@
 
   .buy-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 22px;
     background: linear-gradient(to right, #004AAC, #A4CCFE);
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 74, 172, 0.2);
     transition: all 0.3s ease;
-    font-family: 'Segoe UI', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
   }
 
   .buy-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 74, 172, 0.3);
   }
 
 
@@ -137,49 +133,52 @@
 
     <div class="products">
 
-<!-- Product 1 -->
-  <div class="product-card">
-    <img src="S1.1.jpg" class="product-image">
-    <img src="S1.2.jpg" class="product-image">
-    <div class="product-info">
-      <h2>2 Jar Hamper</h2>
-      <p><strong>Price: ₹249</strong></p>
-      <p>(Includes flavoured peanuts and flavoured makhana)</p>
-      <p><em>Select any two</em></p>
-      <select id="item1" onchange="updatePrice()">
-       <option value="" disabled selected>Select Item 1</option>
-        <option value="0">Flavoured makhana</option>
-        <option value="0">Flavoured peanuts</option>
-        <option value="60">Mixed Seeds (+₹60)</option>
-        <option value="60">Dried Kiwi (+₹60)</option>
-        <option value="60">Dried Mango (+₹60)</option>
-        <option value="60">Dried Papaya (+₹60)</option>
-        <option value="60">Dried Pineapple coins (+₹60)</option>
-        <option value="60">Dried Mixed Fruit (+₹60)</option>
-        <option value="100">Handmade chocolates (+₹100)</option>
-        <option value="100">Cashews (+₹100)</option>
-        <option value="100">Almonds (+₹100)</option>
-      </select>
-      <br><br>
-      <select id="item2" onchange="updatePrice()">
-       <option value="" disabled selected>Select Item 1</option>
-        <option value="0">Flavoured makhana</option>
-        <option value="0">Flavoured peanuts</option>
-        <option value="60">Mixed Seeds (+₹60)</option>
-        <option value="60">Dried Kiwi (+₹60)</option>
-        <option value="60">Dried Mango (+₹60)</option>
-        <option value="60">Dried Papaya (+₹60)</option>
-        <option value="60">Dried Pineapple coins (+₹60)</option>
-        <option value="60">Dried Mixed Fruit (+₹60)</option>
-        <option value="100">Handmade chocolates (+₹100)</option>
-        <option value="100">Cashews (+₹100)</option>
-        <option value="100">Almonds (+₹100)</option>
-      </select>
-      <p id="totalPrice">Total Price: ₹249</p>
-      <button class="btn"
-      onclick="buyNowJar()">Buy Now</button>
-    </div>
-  </div>
+<!-- 2 Jar Hamper Card -->
+<div class="product-card">
+  <img src="S1.1.jpg" class="product-image">
+  <img src="S1.2.jpg" class="product-image">
+  <div class="product-info">
+    <h2>2 Jar Hamper</h2>
+    <p><strong>Base Price: ₹249</strong></p>
+    <p><em>Select any two:</em></p>
+
+    <select id="item1" onchange="calculatePrice()">
+      <option disabled selected>Select Item 1</option>
+      <option value="Flavoured makhana-0">Flavoured makhana</option>
+      <option value="Flavoured peanuts-0">Flavoured peanuts</option>
+      <option value="Mixed Seeds-60">Mixed Seeds (+₹60)</option>
+      <option value="Dried Kiwi-60">Dried Kiwi (+₹60)</option>
+      <option value="Dried Mango-60">Dried Mango (+₹60)</option>
+      <option value="Dried Papaya-60">Dried Papaya (+₹60)</option>
+      <option value="Dried Pineapple coins-60">Dried Pineapple coins (+₹60)</option>
+      <option value="Dried Mixed Fruit-60">Dried Mixed Fruit (+₹60)</option>
+      <option value="Handmade chocolates-100">Handmade chocolates (+₹100)</option>
+      <option value="Cashews-100">Cashews (+₹100)</option>
+      <option value="Almonds-100">Almonds (+₹100)</option>
+    </select>
+
+    <br><br>
+
+    <select id="item2" onchange="calculatePrice()">
+      <option disabled selected>Select Item 2</option>
+      <option value="Flavoured makhana-0">Flavoured makhana</option>
+      <option value="Flavoured peanuts-0">Flavoured peanuts</option>
+      <option value="Mixed Seeds-60">Mixed Seeds (+₹60)</option>
+      <option value="Dried Kiwi-60">Dried Kiwi (+₹60)</option>
+      <option value="Dried Mango-60">Dried Mango (+₹60)</option>
+      <option value="Dried Papaya-60">Dried Papaya (+₹60)</option>
+      <option value="Dried Pineapple coins-60">Dried Pineapple coins (+₹60)</option>
+      <option value="Dried Mixed Fruit-60">Dried Mixed Fruit (+₹60)</option>
+      <option value="Handmade chocolates-100">Handmade chocolates (+₹100)</option>
+      <option value="Cashews-100">Cashews (+₹100)</option>
+      <option value="Almonds-100">Almonds (+₹100)</option>
+    </select>
+
+    <p id="totalPrice">Total Price: ₹249</p>
+    <button class="btn" onclick="sendOrder()">Buy Now</button>
+  </div>
+</div>
+
 
   <!-- Product 2 -->
   <div class="product-card">
@@ -760,14 +759,45 @@
 
 <!-- JavaScript for total price updates -->
 <script>
-  function updatePrice() {
+ 
+ function calculatePrice() {
     const basePrice = 249;
-    const item1 = parseInt(document.getElementById("item1").value);
-    const item2 = parseInt(document.getElementById("item2").value);
-    const total = basePrice + item1 + item2;
-    document.getElementById("totalPrice").innerText = "Total Price: ₹" + total;
+    const item1Value = document.getElementById("item1").value;
+    const item2Value = document.getElementById("item2").value;
+
+    if (!item1Value || !item2Value) {
+      document.getElementById("totalPrice").innerText = Total Price: ₹${basePrice};
+      return;
+    }
+
+    const price1 = parseInt(item1Value.split("-")[1]);
+    const price2 = parseInt(item2Value.split("-")[1]);
+
+    const total = basePrice + price1 + price2;
+    document.getElementById("totalPrice").innerText = Total Price: ₹${total};
   }
 
+  function sendOrder() {
+    const item1Value = document.getElementById("item1").value;
+    const item2Value = document.getElementById("item2").value;
+
+    if (!item1Value || !item2Value) {
+      alert("Please select both items.");
+      return;
+    }
+
+    const basePrice = 249;
+    const item1 = item1Value.split("-")[0];
+    const item2 = item2Value.split("-")[0];
+    const price1 = parseInt(item1Value.split("-")[1]);
+    const price2 = parseInt(item2Value.split("-")[1]);
+    const total = basePrice + price1 + price2;
+
+    const msg = Hi, I want to order the 2 Jar Hamper.%0A%0AItems Selected:%0A1. ${item1}%0A2. ${item2}%0A%0ATotal Price: ₹${total};
+
+    const whatsappURL = https://wa.me/918860842048?text=${msg};
+    window.open(whatsappURL, "_blank");
+  }
 
 
   function updatePinePrice() {
