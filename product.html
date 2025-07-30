@@ -93,6 +93,7 @@
     padding: 10px 22px;
     background: linear-gradient(to right, #004AAC, #A4CCFE);
     color: white;
+    align: center;
     font-weight: 600;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 74, 172, 0.2);
@@ -133,56 +134,50 @@
 
     <div class="products">
 
-<!-- 2 Jar Hamper Card -->
-<div class="product-card">
-  <img src="S1.1.jpg" class="product-image">
-  <img src="S1.2.jpg" class="product-image">
-  <div class="product-info">
-    <h2>2 Jar Hamper</h2>
-    <p><strong>Price: ₹249</strong></p>
-    <p><em>Select any two:</em></p>
+<!-- Product 1 -->
+  <div class="product-card">
+    <img src="S1.1.jpg" class="product-image">
+    <img src="S1.2.jpg" class="product-image">
+    <div class="product-info">
+      <h2>2 Jar Hamper</h2>
+      <p><strong>Price: ₹249</strong></p>
+      <p>(Includes flavoured peanuts and flavoured makhana)</p>
+      <p><em>Select any two</em></p>
+      <select id="item1" onchange="updatePrice()">
+       <option value="" disabled selected>Select Item 1</option>
+        <option value="0">Flavoured makhana</option>
+        <option value="0">Flavoured peanuts</option>
+        <option value="60">Mixed Seeds (+₹60)</option>
+        <option value="60">Dried Kiwi (+₹60)</option>
+        <option value="60">Dried Mango (+₹60)</option>
+        <option value="60">Dried Papaya (+₹60)</option>
+        <option value="60">Dried Pineapple coins (+₹60)</option>
+        <option value="60">Dried Mixed Fruit (+₹60)</option>
+        <option value="100">Handmade chocolates (+₹100)</option>
+        <option value="100">Cashews (+₹100)</option>
+        <option value="100">Almonds (+₹100)</option>
+      </select>
+      <br><br>
+      <select id="item2" onchange="updatePrice()">
+       <option value="" disabled selected>Select Item 1</option>
+        <option value="0">Flavoured makhana</option>
+        <option value="0">Flavoured peanuts</option>
+        <option value="60">Mixed Seeds (+₹60)</option>
+        <option value="60">Dried Kiwi (+₹60)</option>
+        <option value="60">Dried Mango (+₹60)</option>
+        <option value="60">Dried Papaya (+₹60)</option>
+        <option value="60">Dried Pineapple coins (+₹60)</option>
+        <option value="60">Dried Mixed Fruit (+₹60)</option>
+        <option value="100">Handmade chocolates (+₹100)</option>
+        <option value="100">Cashews (+₹100)</option>
+        <option value="100">Almonds (+₹100)</option>
+      </select>
+      <p id="totalPrice">Total Price: ₹249</p>
+      <button class="btn"
+      onclick="buyNowJar()">Buy Now</button>
+    </div>
+  </div>
 
-    <select id="item1" onchange="calculatePrice()">
-      <option disabled selected>Select Item 1</option>
-      <option value="Flavoured makhana-0">Flavoured makhana</option>
-      <option value="Flavoured peanuts-0">Flavoured peanuts</option>
-      <option value="Mixed Seeds-60">Mixed Seeds (+₹60)</option>
-      <option value="Dried Kiwi-60">Dried Kiwi (+₹60)</option>
-      <option value="Dried Mango-60">Dried Mango (+₹60)</option>
-      <option value="Dried Papaya-60">Dried Papaya (+₹60)</option>
-      <option value="Dried Pineapple coins-60">Dried Pineapple coins (+₹60)</option>
-      <option value="Dried Mixed Fruit-60">Dried Mixed Fruit (+₹60)</option>
-      <option value="Handmade chocolates-100">Handmade chocolates (+₹100)</option>
-      <option value="Cashews-100">Cashews (+₹100)</option>
-      <option value="Almonds-100">Almonds (+₹100)</option>
-    </select>
-
-    <br><br>
-
-    <select id="item2" onchange="calculatePrice()">
-      <option disabled selected>Select Item 2</option>
-      <option value="Flavoured makhana-0">Flavoured makhana</option>
-      <option value="Flavoured peanuts-0">Flavoured peanuts</option>
-      <option value="Mixed Seeds-60">Mixed Seeds (+₹60)</option>
-      <option value="Dried Kiwi-60">Dried Kiwi (+₹60)</option>
-      <option value="Dried Mango-60">Dried Mango (+₹60)</option>
-      <option value="Dried Papaya-60">Dried Papaya (+₹60)</option>
-      <option value="Dried Pineapple coins-60">Dried Pineapple coins (+₹60)</option>
-      <option value="Dried Mixed Fruit-60">Dried Mixed Fruit (+₹60)</option>
-      <option value="Handmade chocolates-100">Handmade chocolates (+₹100)</option>
-      <option value="Cashews-100">Cashews (+₹100)</option>
-      <option value="Almonds-100">Almonds (+₹100)</option>
-    </select>
-
-    <p id="totalPrice">Total Price: ₹249</p>
-    <a href="https://wa.me/918860842048?text=Hi! I'm interested in the 2 Jar Hamper." 
-   target="_blank" 
-   class="btn" 
-   style="background-color: #004AAC; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none;">
-   Buy Now
-</a>
-  </div>
-</div>
 
 
   <!-- Product 2 -->
