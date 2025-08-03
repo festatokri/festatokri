@@ -345,7 +345,7 @@
   <img src="S8.2.jpg" class="product-image">
   <div class="product-info">
     <h2>Choco Nut Bliss</h2>
-    <p><strong>Price: ₹299</strong></p>
+    <p><strong>Price: ₹349</strong></p>
     <p>Includes Dry Cake (200g), Flavoured Makhana and Premium Chocolate Bar</p>
     <p><em>Select any one</em></p>
     <select id="chocoNutItem" onchange="updateChocoNutPrice()">
@@ -361,7 +361,7 @@
       <option value="100">Cashews (+₹100)</option>
       <option value="100">Almonds (+₹100)</option>
     </select>
-    <p id="chocoNutTotal">Total Price: ₹299</p>
+    <p id="chocoNutTotal">Total Price: ₹349</p>
     <button class="btn">Buy Now</button>
   </div>
 </div>
@@ -794,7 +794,7 @@ function updateNuttyPrice() {
 }
 
 function updateChocoNutPrice() {
-  const basePrice = 299;
+  const basePrice = 349;
   const selected = parseInt(document.getElementById("chocoNutItem").value);
   const total = basePrice + selected;
   document.getElementById("chocoNutTotal").innerText = "Total Price: ₹" + total;
